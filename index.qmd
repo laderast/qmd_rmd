@@ -63,7 +63,7 @@ highlight-style: github
 - Can still Render within RStudio
 - Render with quarto standalone on command line:
 
-```bash
+```{.bash}
 quarto render my_document.qmd
 ```
 
@@ -82,7 +82,7 @@ quarto render my_document.qmd
 - Jupyter Notebooks are cross compatible
 - One command to interchange: 
 
-```bash    
+```{.bash}    
 quarto convert notebook.ipynb
 ```
 
@@ -90,6 +90,14 @@ Fast way to publish Jupyter Notebooks!
 
 ## Code Output Freezing
 
+- By default, code is not recomputed
+- `quarto render --execute` will recompute
+- Output is "frozen"
+
+```{.markdown}
+execute:
+  freeze: auto  # re-render only when source changes
+```
 
 ## Code Chunks
 
@@ -319,7 +327,7 @@ highlight-style: github
 ---
 ````
 
-## 2. Table of RMarkdown/Quarto Formats
+## 2. RMarkdown/Quarto Formats
 
 | RMarkdown  | Quarto |
 |:-----------|:-------|
@@ -331,7 +339,7 @@ highlight-style: github
 | `output: distill` | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html)
 
 ::: {.footnote}
-https://quarto.org/docs/faq/rmarkdown.html
+<https://quarto.org/docs/faq/rmarkdown.html>
 :::
 
 ## 3. Convert your RMarkdown Code Chunks
@@ -392,9 +400,10 @@ quarto publish quarto-pub
 
 ## Conclusions
 
+- Quarto supports multiple languages / IDEs
 - Quarto standardizes a lot of outputs
 - Does a better job of one document, many outputs
-- 
+- Lots of publishing features (references, figures, etc.)
 
 ## Learn More
 

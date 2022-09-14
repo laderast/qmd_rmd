@@ -53,7 +53,7 @@
     "href": "index.html#code-output-freezing",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Code Output Freezing",
-    "text": "Code Output Freezing"
+    "text": "Code Output Freezing\n\nBy default, code is not recomputed\nquarto render --execute will recompute\nOutput is “frozen”\n\nexecute:\n  freeze: auto  # re-render only when source changes"
   },
   {
     "objectID": "index.html#code-chunks",
@@ -61,6 +61,20 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Code Chunks",
     "text": "Code Chunks\nOptions are moved to within the code chunk using #| (hash-pipe) for each line"
+  },
+  {
+    "objectID": "index.html#rmarkdown",
+    "href": "index.html#rmarkdown",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "RMarkdown",
+    "text": "RMarkdown\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+  },
+  {
+    "objectID": "index.html#quarto",
+    "href": "index.html#quarto",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Quarto",
+    "text": "Quarto\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
   },
   {
     "objectID": "index.html#how-is-quarto-different-from-rmarkdown",
@@ -119,6 +133,13 @@
     "text": "Code Highlighting\n\nIncremental highlighting (line by line)\nKiller app for me\nReally good for teaching!\n\n```{r}\n#| echo: TRUE\n#| eval: FALSE\n#| code-line-numbers: \"3|4-6|7\"\nlibrary(palmerpenguins)\nlibrary(ggplot2)\ndata(penguins)\nggplot(penguins) + aes(x=bill_depth_mm, \n                       y=bill_length_mm, \n                       color = species) + \n  geom_point()\n```"
   },
   {
+    "objectID": "index.html#code-highlighting-example",
+    "href": "index.html#code-highlighting-example",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Code Highlighting Example",
+    "text": "Code Highlighting Example\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\ndata(penguins)\nggplot(penguins) + aes(x=bill_depth_mm, \n                       y=bill_length_mm, \n                       color = species) + \n  geom_point()"
+  },
+  {
     "objectID": "index.html#checklist",
     "href": "index.html#checklist",
     "title": "Quarto/RMarkdown - What’s Different?",
@@ -154,11 +175,11 @@
     "text": "---\ntitle: \"Quarto/RMarkdown - What's Different?\"\nauthor: Ted Laderas\nsubtitle: FCT Abuja useR Group\ndate: 9/15/2022\nformat: \n  revealjs:\n    self-contained: true\n    theme: night\n    footer: <https://laderast.github.io/qmd_rmd/>\nincremental: false\nhighlight-style: github\n---"
   },
   {
-    "objectID": "index.html#table-of-rmarkdownquarto-formats",
-    "href": "index.html#table-of-rmarkdownquarto-formats",
+    "objectID": "index.html#rmarkdownquarto-formats",
+    "href": "index.html#rmarkdownquarto-formats",
     "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "2. Table of RMarkdown/Quarto Formats",
-    "text": "2. Table of RMarkdown/Quarto Formats\n\n\n\nRMarkdown\nQuarto\n\n\n\n\noutput: html_document\nformat: html\n\n\noutput: pdf_document\nformat: pdf\n\n\noutput: word_document\nformat: docx\n\n\noutput: xaringan\nformat: revealjs\n\n\noutput: ioslides\nformat: revealjs\n\n\noutput: distill\nQuarto Article Layout\n\n\n\n\nhttps://quarto.org/docs/faq/rmarkdown.html"
+    "section": "2. RMarkdown/Quarto Formats",
+    "text": "2. RMarkdown/Quarto Formats\n\n\n\nRMarkdown\nQuarto\n\n\n\n\noutput: html_document\nformat: html\n\n\noutput: pdf_document\nformat: pdf\n\n\noutput: word_document\nformat: docx\n\n\noutput: xaringan\nformat: revealjs\n\n\noutput: ioslides\nformat: revealjs\n\n\noutput: distill\nQuarto Article Layout\n\n\n\n\nhttps://quarto.org/docs/faq/rmarkdown.html"
   },
   {
     "objectID": "index.html#convert-your-rmarkdown-code-chunks",
@@ -200,7 +221,7 @@
     "href": "index.html#conclusions",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Conclusions",
-    "text": "Conclusions\n\nQuarto standardizes a lot of outputs\nDoes a better job of one document, many outputs"
+    "text": "Conclusions\n\nQuarto supports multiple languages / IDEs\nQuarto standardizes a lot of outputs\nDoes a better job of one document, many outputs\nLots of publishing features (references, figures, etc.)"
   },
   {
     "objectID": "index.html#learn-more",
@@ -215,26 +236,5 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Observable + Shiny + Quarto",
     "text": "Observable + Shiny + Quarto\n\nRapid prototyping of responsive dashboards\nUses Observable for front end\nUses Shiny reactives for backend\nQuarto for Layout\n\n\n\nhttps://laderast.github.io/qmd_rmd/"
-  },
-  {
-    "objectID": "index.html#rmarkdown",
-    "href": "index.html#rmarkdown",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "RMarkdown",
-    "text": "RMarkdown\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
-  },
-  {
-    "objectID": "index.html#quarto",
-    "href": "index.html#quarto",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Quarto",
-    "text": "Quarto\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
-  },
-  {
-    "objectID": "index.html#code-highlighting-example",
-    "href": "index.html#code-highlighting-example",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Code Highlighting Example",
-    "text": "Code Highlighting Example\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\ndata(penguins)\nggplot(penguins) + aes(x=bill_depth_mm, \n                       y=bill_length_mm, \n                       color = species) + \n  geom_point()"
   }
 ]
