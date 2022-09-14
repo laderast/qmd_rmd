@@ -1,5 +1,7 @@
 project:
   title: "qmd_rmd"
+  type: website
+  output-dir: docs
 
 
 

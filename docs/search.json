@@ -1,0 +1,205 @@
+[
+  {
+    "objectID": "index.html#agenda-for-today",
+    "href": "index.html#agenda-for-today",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Agenda for Today",
+    "text": "Agenda for Today\n\nWhat is Quarto?\nShould you switch from RMarkdown?\n\nDemo\n\nGuide to Converting RMarkdown\nQuestions"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "About Me",
+    "text": "About Me\n\n\n\nRStudio Academy Data Science Mentor\nRStudio/Carpentries Certified Instructor\nBioinformatics Trainer at DNAnexus\nTwitter: @tladeras\nWeb: https://laderast.github.io/"
+  },
+  {
+    "objectID": "index.html#rstudio-conference-2022",
+    "href": "index.html#rstudio-conference-2022",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "RStudio Conference 2022",
+    "text": "RStudio Conference 2022\n\nQuarto Publishing System: https://quarto.org\nMine and Julia’s talk about Collaborating with Quarto\nJoe Cheng’s Shiny Talk"
+  },
+  {
+    "objectID": "index.html#what-is-quarto-1",
+    "href": "index.html#what-is-quarto-1",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\nReproducible Publishing System based on Pandoc\nOne format, many outputs\n\nWebsite\nPublications\nBooks\nDashboards"
+  },
+  {
+    "objectID": "index.html#qmd-files",
+    "href": "index.html#qmd-files",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": ".qmd files",
+    "text": ".qmd files\n\nShort for quarto markdown\nDecoupled from RStudio IDE\n\nplugins for VSCode, JupyterLab and RStudio are available\n\nCan still Render within RStudio\nRender with quarto standalone on command line:\n\nquarto render my_document.qmd"
+  },
+  {
+    "objectID": "index.html#cross-language-support",
+    "href": "index.html#cross-language-support",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Cross Language Support",
+    "text": "Cross Language Support\n\nSupports a number of languages:\n\nR\nPython\nJulia\nObservable\n\nCan interchange between langugages using Apache Arrow"
+  },
+  {
+    "objectID": "index.html#jupyter-notebook-support",
+    "href": "index.html#jupyter-notebook-support",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Jupyter Notebook Support",
+    "text": "Jupyter Notebook Support\n\nJupyter Notebooks are cross compatible\nOne command to interchange:\n\nquarto convert notebook.ipynb\nFast way to publish Jupyter Notebooks!"
+  },
+  {
+    "objectID": "index.html#code-output-freezing",
+    "href": "index.html#code-output-freezing",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Code Output Freezing",
+    "text": "Code Output Freezing"
+  },
+  {
+    "objectID": "index.html#code-chunks",
+    "href": "index.html#code-chunks",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Code Chunks",
+    "text": "Code Chunks\nOptions are moved to within the code chunk using #| (hash-pipe) for each line\n\n\nRMarkdown\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\nQuarto\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+  },
+  {
+    "objectID": "index.html#how-is-quarto-different-from-rmarkdown",
+    "href": "index.html#how-is-quarto-different-from-rmarkdown",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "How is Quarto different from RMarkdown?",
+    "text": "How is Quarto different from RMarkdown?\n\nStandardized YAML across formats\nDecoupled from RStudio\nMore consistent presentation across formats\nTab Panels\nCode Highlighting"
+  },
+  {
+    "objectID": "index.html#should-i-switch-to-quarto",
+    "href": "index.html#should-i-switch-to-quarto",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Should I Switch to Quarto?",
+    "text": "Should I Switch to Quarto?\n\nShould you switch to Quarto? Not necessarily. If you find R Markdown meet your need, you can definitely stay there. It is not imperative to switch. Quarto’s goal is to cover most features of R Markdown eventually, but it may be impossible to become a strict superset of R Markdown. - Yihui Xie\n\n\nhttps://yihui.org/en/2022/04/quarto-r-markdown/"
+  },
+  {
+    "objectID": "index.html#some-killer-apps-for-quarto-html",
+    "href": "index.html#some-killer-apps-for-quarto-html",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Some Killer Apps for Quarto (HTML)",
+    "text": "Some Killer Apps for Quarto (HTML)\n\nPrecise Layouts\nTab Panels\nCode Highlighting"
+  },
+  {
+    "objectID": "index.html#layout-example",
+    "href": "index.html#layout-example",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Layout Example",
+    "text": "Layout Example\n:::: {.columns}\n\n::: {.column width=\"50%\"}\n- Highly customizable\n- Less work than using `<div>` tags\n:::\n\n::: {.column width=\"50%\"}\n- Customizable in terms of layouts\n\n:::\n::::"
+  },
+  {
+    "objectID": "index.html#layout-example-1",
+    "href": "index.html#layout-example-1",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Layout Example",
+    "text": "Layout Example\n\n\n\nHighly customizable\nLess work than using <div> tags\n\n\n\nCustomizable in terms of layouts"
+  },
+  {
+    "objectID": "index.html#tabsets",
+    "href": "index.html#tabsets",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Tabsets",
+    "text": "Tabsets\n::: {.panel-tabset}\n\n### Code\n\nThis is where I would put some code:\n\n### Figure\n\n:::"
+  },
+  {
+    "objectID": "index.html#tabsets-1",
+    "href": "index.html#tabsets-1",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Tabsets",
+    "text": "Tabsets\n\nCodeFigure\n\n\nThis is where I would put some code:\n```{r}\nlibrary(palmerpenguins)\nlibrary(ggplot2)\ndata(penguins)\nggplot(penguins, aes(x=bill_depth_mm, y=bill_length_mm, color = species)) + geom_point()\n```"
+  },
+  {
+    "objectID": "index.html#code-highlighting",
+    "href": "index.html#code-highlighting",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Code Highlighting",
+    "text": "Code Highlighting\n\nKiller app for me\nReally good for teaching!"
+  },
+  {
+    "objectID": "index.html#checklist",
+    "href": "index.html#checklist",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Checklist",
+    "text": "Checklist\n\nStart a Quarto Project\nFor your documents: Change your output: to the corresponding format: in your YAML\nUse knitr::convert_chunk_header() to convert your code blocks (outputs a .qmd file)\nRender your files\nFor websites: edit your _quarto.yml file if necessary"
+  },
+  {
+    "objectID": "index.html#start-a-quarto-project",
+    "href": "index.html#start-a-quarto-project",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "1. Start a Quarto Project",
+    "text": "1. Start a Quarto Project\n\n\nFile > New Project > New Directory > Quarto Project\n\n\n\n\nQuarto Project Start"
+  },
+  {
+    "objectID": "index.html#convert-your-rmarkdown-documents",
+    "href": "index.html#convert-your-rmarkdown-documents",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "2. Convert your Rmarkdown Documents",
+    "text": "2. Convert your Rmarkdown Documents\n\nChange your YAML header\nInstead of output:, use format:"
+  },
+  {
+    "objectID": "index.html#table-of-rmarkdownquarto-formats",
+    "href": "index.html#table-of-rmarkdownquarto-formats",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "2. Table of RMarkdown/Quarto Formats",
+    "text": "2. Table of RMarkdown/Quarto Formats\n\n\n\nRMarkdown\nQuarto\n\n\n\n\noutput: html_document\nformat: html\n\n\noutput: pdf_document\nformat: pdf\n\n\noutput: word_document\nformat: docx\n\n\noutput: xaringan\nformat: revealjs\n\n\noutput: ioslides\nformat: revealjs\n\n\noutput: distill\nQuarto Article Layout\n\n\n\n\nhttps://quarto.org/docs/faq/rmarkdown.html"
+  },
+  {
+    "objectID": "index.html#convert-your-rmarkdown-code-chunks",
+    "href": "index.html#convert-your-rmarkdown-code-chunks",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "3. Convert your RMarkdown Code Chunks",
+    "text": "3. Convert your RMarkdown Code Chunks\nknitr::convert_chunk_header() will convert your RMarkdown code chunks into quarto compatible format.\nknitr::convert_chunk_header(\"filename.Rmd\", \n    output = \"filename.qmd\")"
+  },
+  {
+    "objectID": "index.html#converting-code-chunks",
+    "href": "index.html#converting-code-chunks",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "3. Converting Code Chunks",
+    "text": "3. Converting Code Chunks\n\nOriginalConverted\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\n\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+  },
+  {
+    "objectID": "index.html#render-your-files-on-cli",
+    "href": "index.html#render-your-files-on-cli",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "4. Render your files (on CLI)",
+    "text": "4. Render your files (on CLI)\nquarto render ."
+  },
+  {
+    "objectID": "index.html#update-your-_quarto.yml-for-websites",
+    "href": "index.html#update-your-_quarto.yml-for-websites",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "5. Update your _quarto.yml for websites",
+    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents"
+  },
+  {
+    "objectID": "index.html#publish-your-files-on-cli",
+    "href": "index.html#publish-your-files-on-cli",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Publish your files (on CLI)",
+    "text": "Publish your files (on CLI)\nquarto publish can push and update a number of different kinds of webhosts.\nquarto publish gh-pages\nquarto publish quarto-pub"
+  },
+  {
+    "objectID": "index.html#conclusions",
+    "href": "index.html#conclusions",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Conclusions",
+    "text": "Conclusions\n\nQuarto standardizes a lot of outputs\nDoes a better job of one document, many outputs"
+  },
+  {
+    "objectID": "index.html#learn-more",
+    "href": "index.html#learn-more",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Learn More",
+    "text": "Learn More\nWorkshop materials from Andrew Bray: https://github.com/rstudio-conf-2022/rmd-to-quarto"
+  },
+  {
+    "objectID": "index.html#observable-shiny-quarto",
+    "href": "index.html#observable-shiny-quarto",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Observable + Shiny + Quarto",
+    "text": "Observable + Shiny + Quarto\n\nRapid prototyping of responsive dashboards\nUses Observable for front end\nUses Shiny reactives for backend\nQuarto for Layout\n\n\n\nhttps://laderast.github.io/qmd_rmd/"
+  }
+]
