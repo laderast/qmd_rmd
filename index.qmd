@@ -420,6 +420,8 @@ website:
 ```{.bash}
 quarto publish gh-pages
 quarto publish quarto-pub 
+quarto publish netlify
+quarto publish connect
 ```
 
 ## Conclusions
