@@ -1,0 +1,356 @@
+---
+title: "Quarto/RMarkdown - What's Different?"
+author: Ted Laderas
+subtitle: FCT Abuja useR Group
+date: 9/15/2022
+format: 
+  revealjs:
+    theme: night
+    footer: <https://laderast.github.io/qmd_rmd/>
+incremental: false
+highlight-style: github
+---
+
+## Agenda for Today
+
+- What is Quarto?
+- Should you switch from RMarkdown?
+  - Demo
+- Guide to Converting RMarkdown
+- Questions
+
+## About Me
+
+:::: {.columns}
+
+::: {.column width="65%"}
+- [RStudio Academy](https://www.rstudio.com/academy) Data Science Mentor
+- RStudio/Carpentries Certified Instructor
+- Bioinformatics Trainer at [DNAnexus](https://dnanexus.com)
+- Twitter: @tladeras 
+- Web: https://laderast.github.io/
+:::
+
+::: {.column width="35%"}
+![](ted.jpg)
+:::
+
+::::
+
+# What is Quarto?
+
+## RStudio Conference 2022
+
+- Quarto Publishing System: <https://quarto.org>
+- [Mine and Julia's talk about Collaborating with Quarto](https://www.rstudio.com/conference/2022/keynotes/collaborate-with-quarto/)
+- [Joe Cheng's Shiny Talk](https://www.rstudio.com/conference/2022/keynotes/past-future-shiny/)
+
+## What is Quarto?
+
+- **Reproducible Publishing** System based on Pandoc
+- One format, many outputs
+  - Website
+  - Publications
+  - Books
+  - **Dashboards**
+
+## .qmd files
+
+- Short for **q**uarto **m**ark**d**own
+- Decoupled from RStudio IDE
+  - plugins for VSCode, JupyterLab and RStudio are available
+- Can still Render within RStudio
+- Render with quarto standalone on command line:
+
+```bash
+quarto render my_document.qmd
+```
+
+## Cross Language Support
+
+- Supports a number of languages:
+    - R
+    - Python
+    - Julia
+    - Observable
+- Can [interchange between langugages using Apache Arrow](https://gist.github.com/hrbrmstr/23355194d1964688596553a0e6a0050a)
+
+
+## Jupyter Notebook Support
+
+- Jupyter Notebooks are cross compatible
+- One command to interchange: 
+
+```bash    
+quarto convert notebook.ipynb
+```
+
+Fast way to publish Jupyter Notebooks!
+
+## Code Output Freezing
+
+
+## Code Chunks
+
+Options are moved to within the code chunk using `#|` (hash-pipe) for each line
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### RMarkdown
+````{.markdown code-line-numbers="1"}
+```{{r setup, include=FALSE}}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(DT)
+library(ggimage)
+```
+````
+:::
+
+::: {.column width="50%"}
+
+### Quarto
+
+````{.markdown code-line-numbers="2-3"}
+```{{r}}
+#| label = "setup",
+#| include = FALSE
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(DT)
+library(ggimage)
+```
+````
+:::
+::::
+
+
+# What's Different with Quarto?
+
+## How is Quarto different from RMarkdown?
+
+- Standardized YAML across formats
+- Decoupled from RStudio
+- More consistent presentation across formats
+- Tab Panels 
+- Code Highlighting
+
+## Should I Switch to Quarto?
+
+> Should you switch to Quarto? Not necessarily. 
+> If you find R Markdown meet your need, you can definitely stay there. It is not imperative to switch. 
+> Quarto’s goal is to cover most features of R Markdown eventually, but it may be impossible to become a strict superset of R Markdown. - Yihui Xie
+
+::: {.footnote}
+<https://yihui.org/en/2022/04/quarto-r-markdown/>
+:::
+
+## Some Killer Apps for Quarto (HTML)
+
+- Precise Layouts
+- Tab Panels
+- Code Highlighting
+
+## Layout Example
+
+````{.markdown}
+:::: {.columns}
+
+::: {.column width="50%"}
+- Highly customizable
+- Less work than using `<div>` tags
+:::
+
+::: {.column width="50%"}
+- Customizable in terms of layouts
+
+:::
+::::
+````
+
+## Layout Example
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Highly customizable
+- Less work than using `<div>` tags
+:::
+
+::: {.column width="50%"}
+- Customizable in terms of layouts
+
+:::
+::::
+
+## Tabsets
+
+````{.markdown}
+::: {.panel-tabset}
+
+### Code
+
+This is where I would put some code:
+
+### Figure
+
+:::
+````
+
+
+## Tabsets
+
+::: {.panel-tabset}
+
+### Code
+
+This is where I would put some code:
+
+````{.markdown}
+```{{r}}
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins, aes(x=bill_depth_mm, y=bill_length_mm, color = species)) + geom_point()
+```
+````
+
+### Figure
+
+```{r}
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins, aes(x=bill_depth_mm, y=bill_length_mm, color = species)) + geom_point()
+```
+
+:::
+
+## Code Highlighting
+
+- Killer app for me
+- Really good for teaching!
+
+# How to move to Quarto
+
+## Checklist
+
+1. Start a Quarto Project
+1. For your documents: Change your `output:` to the corresponding `format:` in your YAML
+1. Use `knitr::convert_chunk_header()` to convert your code blocks (outputs a `.qmd` file)
+1. Render your files
+1. For websites: edit your `_quarto.yml` file if necessary 
+
+## 1. Start a Quarto Project
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**File >** 
+**New Project >** 
+**New Directory >** 
+**Quarto Project**
+:::
+
+::: {.column width="50%"}
+![Quarto Project Start](quarto_project.png)
+:::
+::::
+
+## 2. Convert your Rmarkdown Documents
+
+- Change your YAML header
+- Instead of `output: `, use `format: `
+
+## 2. Table of RMarkdown/Quarto Formats
+
+| RMarkdown  | Quarto |
+|:-----------|:-------|
+| `output: html_document` | [`format: html`](https://quarto.org/docs/output-formats/html-basics.html)|
+| `output: pdf_document` | [`format: pdf`](https://quarto.org/docs/output-formats/pdf-basics.html) |
+| `output: word_document` | [`format: docx`](https://quarto.org/docs/output-formats/ms-word.html) |
+| `output: xaringan` | [`format: revealjs`](https://quarto.org/docs/presentations/revealjs/) |
+| `output: ioslides` | [`format: revealjs`](https://quarto.org/docs/presentations/revealjs/) |
+| `output: distill` | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html)
+
+::: {.footnote}
+https://quarto.org/docs/faq/rmarkdown.html
+:::
+
+## 3. Convert your RMarkdown Code Chunks
+
+`knitr::convert_chunk_header()` will convert your RMarkdown code chunks into quarto compatible format.
+
+```{{r}}
+knitr::convert_chunk_header("filename.Rmd", 
+	output = "filename.qmd")
+```
+
+## 3. Converting Code Chunks
+
+::: {.panel-tabset}
+
+### Original
+
+````{.markdown}
+```{{r setup, include=FALSE}}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(DT)
+library(ggimage)
+```
+````
+### Converted
+
+````{.markdown}
+```{{r}}
+#| label = "setup",
+#| include = FALSE
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(DT)
+library(ggimage)
+```
+````
+:::
+
+## 4. Render your files (on CLI)
+
+```{.bash}
+quarto render .
+```
+
+## 5. Update your `_quarto.yml` for websites
+
+- Controls navigation and visibility of documents
+
+## Publish your files (on CLI)
+
+`quarto publish` can push and update a number of different kinds of webhosts. 
+
+```{.bash}
+quarto publish gh-pages
+quarto publish quarto-pub 
+```
+
+## Conclusions
+
+- Quarto standardizes a lot of outputs
+- Does a better job of one document, many outputs
+- 
+
+## Learn More
+
+Workshop materials from Andrew Bray: <https://github.com/rstudio-conf-2022/rmd-to-quarto>
+
+# Thank You! Questions?
+
+# Extras
+
+## Observable + Shiny + Quarto
+
+- Rapid prototyping of responsive dashboards
+- Uses Observable for front end
+- Uses Shiny reactives for backend
+- Quarto for Layout

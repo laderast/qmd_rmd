@@ -1,0 +1,64 @@
+---
+title: "flights_demo"
+format: html
+server:
+  type: shiny
+---
+
+
+
+## Obs + Shiny + Quarto 2
+
+```{ojs}
+//| panel: input
+//| layout-ncol: 3
+
+var_f = flight_cols
+viewof xcol_f = Inputs.select(var_f, {label: "X Variable", value: var_f[0]})
+viewof ycol_f = Inputs.select(var_f, {label: "Y Variable", value: var_f[1]})
+
+//viewof bill_length_min = Inputs.range(
+//  [32, 50], 
+//  {value: 35, step: 1, label: "Bill length (min):"}
+//)
+```
+
+::: {.panel-fill layout="[ [1] ]"}
+
+```{ojs}
+Plot.rect(transpose(selectedData_f), Plot.bin({fillOpacity: "count"}, {x: xcol_f, y: ycol_f})).plot()
+```
+:::
+
+```{r}
+#| context: server-start
+library(dplyr)
+library(tidyr)
+library(nycflights13)
+data(flights)
+flights <- flights |>
+  select(all_of(c("year", "dest", "dep_time", "sched_dep_time", "dep_delay", "sched_arr_time", "arr_time", "arr_delay"))) |>
+  filter(dest %in% c("IAH", "MIA", "BQN", "ATL", "ORD", "FLL", "IAD")) |>
+  filter(arr_delay < 300)
+```
+
+```{r}
+#| context: server
+flight_cols <- reactive({
+  #flights |> select(where(is.numeric)) |> 
+  #  colnames()
+  c("dep_time", "sched_dep_time", "dep_delay", "sched_arr_time", "arr_time", "arr_delay")
+  })
+
+selectedData_f <- reactive({
+  req(input$xcol_f)
+  req(input$ycol_f)
+
+  col_sel <- c(input$xcol, input$ycol)
+  
+  flights
+    
+})
+
+ojs_define(selectedData_f, flight_cols)
+```
