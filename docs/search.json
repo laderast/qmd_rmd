@@ -60,7 +60,7 @@
     "href": "index.html#code-chunks",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Code Chunks",
-    "text": "Code Chunks\nOptions are moved to within the code chunk using #| (hash-pipe) for each line\n\n\nRMarkdown\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\nQuarto\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+    "text": "Code Chunks\nOptions are moved to within the code chunk using #| (hash-pipe) for each line"
   },
   {
     "objectID": "index.html#how-is-quarto-different-from-rmarkdown",
@@ -116,7 +116,7 @@
     "href": "index.html#code-highlighting",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Code Highlighting",
-    "text": "Code Highlighting\n\nKiller app for me\nReally good for teaching!"
+    "text": "Code Highlighting\n\nIncremental highlighting (line by line)\nKiller app for me\nReally good for teaching!\n\n```{r}\n#| echo: TRUE\n#| eval: FALSE\n#| code-line-numbers: \"3|4-6|7\"\nlibrary(palmerpenguins)\nlibrary(ggplot2)\ndata(penguins)\nggplot(penguins) + aes(x=bill_depth_mm, \n                       y=bill_length_mm, \n                       color = species) + \n  geom_point()\n```"
   },
   {
     "objectID": "index.html#checklist",
@@ -138,6 +138,20 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "2. Convert your Rmarkdown Documents",
     "text": "2. Convert your Rmarkdown Documents\n\nChange your YAML header\nInstead of output:, use format:"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "",
+    "text": "---\ntitle: \"Quarto/RMarkdown - What's Different?\"\nauthor: Ted Laderas\nsubtitle: FCT Abuja useR Group\ndate: 9/15/2022\noutput:\n  xaringan::moon_reader:\n    lib_dir: libs\n    css: xaringan-themer.css\n---"
+  },
+  {
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "",
+    "text": "---\ntitle: \"Quarto/RMarkdown - What's Different?\"\nauthor: Ted Laderas\nsubtitle: FCT Abuja useR Group\ndate: 9/15/2022\nformat: \n  revealjs:\n    self-contained: true\n    theme: night\n    footer: <https://laderast.github.io/qmd_rmd/>\nincremental: false\nhighlight-style: github\n---"
   },
   {
     "objectID": "index.html#table-of-rmarkdownquarto-formats",
@@ -201,5 +215,26 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Observable + Shiny + Quarto",
     "text": "Observable + Shiny + Quarto\n\nRapid prototyping of responsive dashboards\nUses Observable for front end\nUses Shiny reactives for backend\nQuarto for Layout\n\n\n\nhttps://laderast.github.io/qmd_rmd/"
+  },
+  {
+    "objectID": "index.html#rmarkdown",
+    "href": "index.html#rmarkdown",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "RMarkdown",
+    "text": "RMarkdown\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+  },
+  {
+    "objectID": "index.html#quarto",
+    "href": "index.html#quarto",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Quarto",
+    "text": "Quarto\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+  },
+  {
+    "objectID": "index.html#code-highlighting-example",
+    "href": "index.html#code-highlighting-example",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Code Highlighting Example",
+    "text": "Code Highlighting Example\n\nlibrary(palmerpenguins)\nlibrary(ggplot2)\ndata(penguins)\nggplot(penguins) + aes(x=bill_depth_mm, \n                       y=bill_length_mm, \n                       color = species) + \n  geom_point()"
   }
 ]

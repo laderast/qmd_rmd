@@ -5,6 +5,7 @@ subtitle: FCT Abuja useR Group
 date: 9/15/2022
 format: 
   revealjs:
+    self-contained: true
     theme: night
     footer: <https://laderast.github.io/qmd_rmd/>
 incremental: false
@@ -94,11 +95,8 @@ Fast way to publish Jupyter Notebooks!
 
 Options are moved to within the code chunk using `#|` (hash-pipe) for each line
 
-:::: {.columns}
-
-::: {.column width="50%"}
-### RMarkdown
-````{.markdown code-line-numbers="1"}
+## RMarkdown {auto-animate="true"}
+````{.markdown}
 ```{{r setup, include=FALSE}}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -106,13 +104,10 @@ library(DT)
 library(ggimage)
 ```
 ````
-:::
 
-::: {.column width="50%"}
+## Quarto {auto-animate="true"}
 
-### Quarto
-
-````{.markdown code-line-numbers="2-3"}
+````{.markdown}
 ```{{r}}
 #| label = "setup",
 #| include = FALSE
@@ -122,8 +117,6 @@ library(DT)
 library(ggimage)
 ```
 ````
-:::
-::::
 
 
 # What's Different with Quarto?
@@ -229,8 +222,39 @@ ggplot(penguins, aes(x=bill_depth_mm, y=bill_length_mm, color = species)) + geom
 
 ## Code Highlighting
 
+- Incremental highlighting (line by line)
 - Killer app for me
 - Really good for teaching!
+
+````{.markdown}
+```{{r}}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "3|4-6|7"
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins) + aes(x=bill_depth_mm, 
+                       y=bill_length_mm, 
+                       color = species) + 
+  geom_point()
+```
+````
+
+## Code Highlighting Example
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "3|4-6|7"
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins) + aes(x=bill_depth_mm, 
+                       y=bill_length_mm, 
+                       color = species) + 
+  geom_point()
+```
 
 # How to move to Quarto
 
@@ -262,6 +286,38 @@ ggplot(penguins, aes(x=bill_depth_mm, y=bill_length_mm, color = species)) + geom
 
 - Change your YAML header
 - Instead of `output: `, use `format: `
+
+## {auto-animate="true"}
+
+````{.markdown}
+---
+title: "Quarto/RMarkdown - What's Different?"
+author: Ted Laderas
+subtitle: FCT Abuja useR Group
+date: 9/15/2022
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+---
+````
+## {auto-animate="true"}
+
+````{.markdown}
+---
+title: "Quarto/RMarkdown - What's Different?"
+author: Ted Laderas
+subtitle: FCT Abuja useR Group
+date: 9/15/2022
+format: 
+  revealjs:
+    self-contained: true
+    theme: night
+    footer: <https://laderast.github.io/qmd_rmd/>
+incremental: false
+highlight-style: github
+---
+````
 
 ## 2. Table of RMarkdown/Quarto Formats
 
