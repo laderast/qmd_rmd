@@ -193,7 +193,7 @@
     "href": "index.html#converting-code-chunks",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "3. Converting Code Chunks",
-    "text": "3. Converting Code Chunks\n\nOriginalConverted\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\n\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+    "text": "3. Converting Code Chunks\n\nOriginal ChunkConverted Chunk\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\n\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
   },
   {
     "objectID": "index.html#render-your-files-on-cli",
@@ -207,7 +207,7 @@
     "href": "index.html#update-your-_quarto.yml-for-websites",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "5. Update your _quarto.yml for websites",
-    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents"
+    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents\n\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.qmd\n      - blog.qmd\n      - talks.qmd"
   },
   {
     "objectID": "index.html#publish-your-files-on-cli",
@@ -236,5 +236,26 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Observable + Shiny + Quarto",
     "text": "Observable + Shiny + Quarto\n\nRapid prototyping of responsive dashboards\nUses Observable for front end\nUses Shiny reactives for backend\nQuarto for Layout\n\n\n\nhttps://laderast.github.io/qmd_rmd/"
+  },
+  {
+    "objectID": "index.html#render-your-files",
+    "href": "index.html#render-your-files",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "4. Render your files",
+    "text": "4. Render your files\n\n\nVia RStudio GUI\n\nRender button in RStudio\n\nquarto::quarto_render()`\n\nVia Command Line\nquarto render <filename>"
+  },
+  {
+    "objectID": "index.html#render-via-rstudio-gui",
+    "href": "index.html#render-via-rstudio-gui",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "4. Render via RStudio GUI",
+    "text": "4. Render via RStudio GUI\n\nRender button in RStudio\n\nquarto::quarto_render()`"
+  },
+  {
+    "objectID": "index.html#render-via-command-line",
+    "href": "index.html#render-via-command-line",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "4. Render via Command Line",
+    "text": "4. Render via Command Line\n> quarto render <filename>"
   }
 ]

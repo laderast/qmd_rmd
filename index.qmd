@@ -355,7 +355,7 @@ knitr::convert_chunk_header("filename.Rmd",
 
 ::: {.panel-tabset}
 
-### Original
+### Original Chunk
 
 ````{.markdown}
 ```{{r setup, include=FALSE}}
@@ -365,7 +365,7 @@ library(DT)
 library(ggimage)
 ```
 ````
-### Converted
+### Converted Chunk
 
 ````{.markdown}
 ```{{r}}
@@ -379,15 +379,39 @@ library(ggimage)
 ````
 :::
 
-## 4. Render your files (on CLI)
+## 4. Render via RStudio GUI
+
+- Render button in RStudio
+```r
+quarto::quarto_render()`
+```
+## 4. Render via Command Line
 
 ```{.bash}
-quarto render .
+> quarto render <filename>
 ```
 
 ## 5. Update your `_quarto.yml` for websites
 
 - Controls navigation and visibility of documents
+
+```{markdown}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "1-2|4-6|7-12"
+project:
+  type: website
+
+website:
+  title: "Ted Laderas, PhD"
+  description: "Ted's R and Teaching Blog"
+  navbar:
+    right:
+      - teaching.qmd
+      - articles.qmd
+      - blog.qmd
+      - talks.qmd
+```
 
 ## Publish your files (on CLI)
 
