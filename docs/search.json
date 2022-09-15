@@ -214,7 +214,7 @@
     "href": "index.html#publish-your-files-on-cli",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Publish your files (on CLI)",
-    "text": "Publish your files (on CLI)\nquarto publish can push and update a number of different kinds of webhosts.\nquarto publish gh-pages\nquarto publish quarto-pub \nquarto publish netlify\nquarto publish connect"
+    "text": "Publish your files (on CLI)\nquarto publish can push and update a number of different kinds of webhosts.\nquarto publish gh-pages    # GitHub Pages\nquarto publish quarto-pub  # Quarto.pub \nquarto publish netlify     # Netlify\nquarto publish connect     # RStudio Connect\n\nhttps://quarto.org/docs/publishing/"
   },
   {
     "objectID": "index.html#conclusions",

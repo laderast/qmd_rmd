@@ -393,7 +393,7 @@ quarto::quarto_render()`
 
 ## 5. Update your `_quarto.yml` for websites
 
-- Controls navigation and visibility of documents
+- Controls [navigation and visibility of documents](https://quarto.org/docs/websites/)
 
 ```{markdown}
 #| echo: TRUE
@@ -418,11 +418,15 @@ website:
 `quarto publish` can push and update a number of different kinds of webhosts. 
 
 ```{.bash}
-quarto publish gh-pages
-quarto publish quarto-pub 
-quarto publish netlify
-quarto publish connect
+quarto publish gh-pages    # GitHub Pages
+quarto publish quarto-pub  # Quarto.pub 
+quarto publish netlify     # Netlify
+quarto publish connect     # RStudio Connect
 ```
+
+::: {.footnote}
+<https://quarto.org/docs/publishing/>
+:::
 
 ## Conclusions
 
