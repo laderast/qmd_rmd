@@ -7,6 +7,7 @@ format:
   revealjs:
     self-contained: true
     theme: night
+    progress: true
     footer: <https://laderast.github.io/qmd_rmd/>
 incremental: false
 highlight-style: github
@@ -143,7 +144,7 @@ library(ggimage)
 > If you find R Markdown meet your need, you can definitely stay there. It is not imperative to switch. 
 > Quarto’s goal is to cover most features of R Markdown eventually, but it may be impossible to become a strict superset of R Markdown. - Yihui Xie
 
-::: {.footnote}
+::: aside
 <https://yihui.org/en/2022/04/quarto-r-markdown/>
 :::
 
@@ -338,7 +339,7 @@ highlight-style: github
 | `output: ioslides` | [`format: revealjs`](https://quarto.org/docs/presentations/revealjs/) |
 | `output: distill` | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html)
 
-::: {.footnote}
+::: aside
 <https://quarto.org/docs/faq/rmarkdown.html>
 :::
 
@@ -424,7 +425,7 @@ quarto publish netlify     # Netlify
 quarto publish connect     # RStudio Connect
 ```
 
-::: {.footnote}
+::: aside
 <https://quarto.org/docs/publishing/>
 :::
 
