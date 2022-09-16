@@ -10,7 +10,7 @@ format:
     progress: true
     footer: <https://laderast.github.io/qmd_rmd/>
 incremental: false
-highlight-style: github
+highlight-style: a11y
 ---
 
 ## Agenda for Today
