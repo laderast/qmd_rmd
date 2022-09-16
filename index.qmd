@@ -80,7 +80,7 @@ quarto render my_document.qmd
 
 ## Jupyter Notebook Support
 
-- Jupyter Notebooks are cross compatible
+- [Jupyter Notebooks are cross compatible](https://quarto.org/docs/tools/jupyter-lab.html)
 - One command to interchange: 
 
 ```{.bash}    
