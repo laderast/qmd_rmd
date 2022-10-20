@@ -545,25 +545,53 @@
 <section id="some-killer-apps-for-quarto-html" class="slide level2">
 <h2>Some Killer Apps for Quarto (HTML)</h2>
 <ul>
+<li>Output Freezing</li>
 <li>Precise Layouts</li>
 <li>Tab Panels</li>
 <li>Code Highlighting</li>
 </ul>
 </section>
+<section id="freeze-results-and-avoid-recomputing" class="slide level2">
+<h2>Freeze Results and avoid recomputing</h2>
+<ul>
+<li>Creates a <code>freeze/</code> directory in your project</li>
+<li>Saves intermediate output</li>
+</ul>
+<pre><code>#| eval: false
+#| echo: true
+#| filename: _quarto.yml
+
+project:
+  title: "qmd_rmd"
+  type: website
+  output-dir: docs
+  
+freeze: true</code></pre>
+</section>
+<section id="freeze-results-cli" class="slide level2">
+<h2>Freeze Results: CLI</h2>
+<ul>
+<li>Results are frozen with <code>quarto render</code> by default.</li>
+<li>Use <code>--execute</code> to recompute:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">quarto</span> render . <span class="at">--execute</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="layout-example" class="slide level2">
 <h2>Layout Example</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>:::: {.columns}</span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a>::: {.column width="50%"}</span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="ss">- </span>Highly customizable</span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="ss">- </span>Less work than using <span class="in">`&lt;div&gt;`</span> tags</span>
-<span id="cb6-6"><a href="#cb6-6"></a>:::</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a>::: {.column width="50%"}</span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="ss">- </span>Customizable in terms of layouts</span>
-<span id="cb6-10"><a href="#cb6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11"></a>:::</span>
-<span id="cb6-12"><a href="#cb6-12"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>:::: {.columns}</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a>::: {.column width="50%"}</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="ss">- </span>Highly customizable</span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="ss">- </span>Less work than using <span class="in">`&lt;div&gt;`</span> tags</span>
+<span id="cb8-6"><a href="#cb8-6"></a>:::</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>::: {.column width="50%"}</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="ss">- </span>Customizable in terms of layouts</span>
+<span id="cb8-10"><a href="#cb8-10"></a></span>
+<span id="cb8-11"><a href="#cb8-11"></a>:::</span>
+<span id="cb8-12"><a href="#cb8-12"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="layout-example-1" class="slide level2">
 <h2>Layout Example</h2>
@@ -582,15 +610,15 @@
 </section>
 <section id="tabsets" class="slide level2">
 <h2>Tabsets</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a>::: {.panel-tabset}</span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">### Code</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5"></a>This is where I would put some code:</span>
-<span id="cb7-6"><a href="#cb7-6"></a></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="fu">### Figure</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a>::: {.panel-tabset}</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">### Code</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a>This is where I would put some code:</span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="fu">### Figure</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="tabsets-1" class="slide level2">
 <h2>Tabsets</h2>
@@ -599,17 +627,17 @@
 <div class="tab-content">
 <div id="tabset-1-1">
 <p>This is where I would put some code:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="fu">data</span>(penguins)</span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x=</span>bill_depth_mm, <span class="at">y=</span>bill_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="fu">data</span>(penguins)</span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x=</span>bill_depth_mm, <span class="at">y=</span>bill_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-2">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -623,29 +651,29 @@
 <li>Killer app for me</li>
 <li>Really good for teaching!</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="co">#| echo: TRUE</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="co">#| eval: FALSE</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="co">#| code-line-numbers: "3|4-6|7"</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-7"><a href="#cb9-7"></a><span class="fu">data</span>(penguins)</span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="fu">ggplot</span>(penguins) <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x=</span>bill_depth_mm, </span>
-<span id="cb9-9"><a href="#cb9-9"></a>                       <span class="at">y=</span>bill_length_mm, </span>
-<span id="cb9-10"><a href="#cb9-10"></a>                       <span class="at">color =</span> species) <span class="sc">+</span> </span>
-<span id="cb9-11"><a href="#cb9-11"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="co">#| echo: TRUE</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co">#| eval: FALSE</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="co">#| code-line-numbers: "3|4-6|7"</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="fu">data</span>(penguins)</span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="fu">ggplot</span>(penguins) <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x=</span>bill_depth_mm, </span>
+<span id="cb11-9"><a href="#cb11-9"></a>                       <span class="at">y=</span>bill_length_mm, </span>
+<span id="cb11-10"><a href="#cb11-10"></a>                       <span class="at">color =</span> species) <span class="sc">+</span> </span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="code-highlighting-example" class="slide level2">
 <h2>Code Highlighting Example</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="3|4-6|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">data</span>(penguins)</span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="fu">ggplot</span>(penguins) <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x=</span>bill_depth_mm, </span>
-<span id="cb10-5"><a href="#cb10-5"></a>                       <span class="at">y=</span>bill_length_mm, </span>
-<span id="cb10-6"><a href="#cb10-6"></a>                       <span class="at">color =</span> species) <span class="sc">+</span> </span>
-<span id="cb10-7"><a href="#cb10-7"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="3|4-6|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">data</span>(penguins)</span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="fu">ggplot</span>(penguins) <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x=</span>bill_depth_mm, </span>
+<span id="cb12-5"><a href="#cb12-5"></a>                       <span class="at">y=</span>bill_length_mm, </span>
+<span id="cb12-6"><a href="#cb12-6"></a>                       <span class="at">color =</span> species) <span class="sc">+</span> </span>
+<span id="cb12-7"><a href="#cb12-7"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -687,32 +715,32 @@
 </section>
 <section id="section" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb11-1" class="hljs-ln-code"><a href="#cb11-1"></a><span class="co">---</span></span>
-<span id="cb11-2" class="hljs-ln-code"><a href="#cb11-2"></a><span class="an">title:</span><span class="co"> "Quarto/RMarkdown - What's Different?"</span></span>
-<span id="cb11-3" class="hljs-ln-code"><a href="#cb11-3"></a><span class="an">author:</span><span class="co"> Ted Laderas</span></span>
-<span id="cb11-4" class="hljs-ln-code"><a href="#cb11-4"></a><span class="an">subtitle:</span><span class="co"> FCT Abuja useR Group</span></span>
-<span id="cb11-5" class="hljs-ln-code"><a href="#cb11-5"></a><span class="an">date:</span><span class="co"> 9/15/2022</span></span>
-<span id="cb11-6" class="hljs-ln-code"><a href="#cb11-6"></a><span class="an">output:</span></span>
-<span id="cb11-7" class="hljs-ln-code"><a href="#cb11-7"></a><span class="co">  xaringan::moon_reader:</span></span>
-<span id="cb11-8" class="hljs-ln-code"><a href="#cb11-8"></a><span class="co">    lib_dir: libs</span></span>
-<span id="cb11-9" class="hljs-ln-code"><a href="#cb11-9"></a><span class="co">    css: xaringan-themer.css</span></span>
-<span id="cb11-10" class="hljs-ln-code"><a href="#cb11-10"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb13-1" class="hljs-ln-code"><a href="#cb13-1"></a><span class="co">---</span></span>
+<span id="cb13-2" class="hljs-ln-code"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> "Quarto/RMarkdown - What's Different?"</span></span>
+<span id="cb13-3" class="hljs-ln-code"><a href="#cb13-3"></a><span class="an">author:</span><span class="co"> Ted Laderas</span></span>
+<span id="cb13-4" class="hljs-ln-code"><a href="#cb13-4"></a><span class="an">subtitle:</span><span class="co"> FCT Abuja useR Group</span></span>
+<span id="cb13-5" class="hljs-ln-code"><a href="#cb13-5"></a><span class="an">date:</span><span class="co"> 9/15/2022</span></span>
+<span id="cb13-6" class="hljs-ln-code"><a href="#cb13-6"></a><span class="an">output:</span></span>
+<span id="cb13-7" class="hljs-ln-code"><a href="#cb13-7"></a><span class="co">  xaringan::moon_reader:</span></span>
+<span id="cb13-8" class="hljs-ln-code"><a href="#cb13-8"></a><span class="co">    lib_dir: libs</span></span>
+<span id="cb13-9" class="hljs-ln-code"><a href="#cb13-9"></a><span class="co">    css: xaringan-themer.css</span></span>
+<span id="cb13-10" class="hljs-ln-code"><a href="#cb13-10"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="section-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb12-1" class="hljs-ln-code"><a href="#cb12-1"></a><span class="co">---</span></span>
-<span id="cb12-2" class="hljs-ln-code"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> "Quarto/RMarkdown - What's Different?"</span></span>
-<span id="cb12-3" class="hljs-ln-code"><a href="#cb12-3"></a><span class="an">author:</span><span class="co"> Ted Laderas</span></span>
-<span id="cb12-4" class="hljs-ln-code"><a href="#cb12-4"></a><span class="an">subtitle:</span><span class="co"> FCT Abuja useR Group</span></span>
-<span id="cb12-5" class="hljs-ln-code"><a href="#cb12-5"></a><span class="an">date:</span><span class="co"> 9/15/2022</span></span>
-<span id="cb12-6" class="hljs-ln-code"><a href="#cb12-6"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb12-7" class="hljs-ln-code"><a href="#cb12-7"></a><span class="co">  revealjs:</span></span>
-<span id="cb12-8" class="hljs-ln-code"><a href="#cb12-8"></a><span class="co">    self-contained: true</span></span>
-<span id="cb12-9" class="hljs-ln-code"><a href="#cb12-9"></a><span class="co">    theme: night</span></span>
-<span id="cb12-10" class="hljs-ln-code"><a href="#cb12-10"></a><span class="co">    footer: &lt;https://laderast.github.io/qmd_rmd/&gt;</span></span>
-<span id="cb12-11" class="hljs-ln-code"><a href="#cb12-11"></a><span class="an">incremental:</span><span class="co"> false</span></span>
-<span id="cb12-12" class="hljs-ln-code"><a href="#cb12-12"></a><span class="an">highlight-style:</span><span class="co"> github</span></span>
-<span id="cb12-13" class="hljs-ln-code"><a href="#cb12-13"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb14-1" class="hljs-ln-code"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2" class="hljs-ln-code"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> "Quarto/RMarkdown - What's Different?"</span></span>
+<span id="cb14-3" class="hljs-ln-code"><a href="#cb14-3"></a><span class="an">author:</span><span class="co"> Ted Laderas</span></span>
+<span id="cb14-4" class="hljs-ln-code"><a href="#cb14-4"></a><span class="an">subtitle:</span><span class="co"> FCT Abuja useR Group</span></span>
+<span id="cb14-5" class="hljs-ln-code"><a href="#cb14-5"></a><span class="an">date:</span><span class="co"> 9/15/2022</span></span>
+<span id="cb14-6" class="hljs-ln-code"><a href="#cb14-6"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb14-7" class="hljs-ln-code"><a href="#cb14-7"></a><span class="co">  revealjs:</span></span>
+<span id="cb14-8" class="hljs-ln-code"><a href="#cb14-8"></a><span class="co">    self-contained: true</span></span>
+<span id="cb14-9" class="hljs-ln-code"><a href="#cb14-9"></a><span class="co">    theme: night</span></span>
+<span id="cb14-10" class="hljs-ln-code"><a href="#cb14-10"></a><span class="co">    footer: &lt;https://laderast.github.io/qmd_rmd/&gt;</span></span>
+<span id="cb14-11" class="hljs-ln-code"><a href="#cb14-11"></a><span class="an">incremental:</span><span class="co"> false</span></span>
+<span id="cb14-12" class="hljs-ln-code"><a href="#cb14-12"></a><span class="an">highlight-style:</span><span class="co"> github</span></span>
+<span id="cb14-13" class="hljs-ln-code"><a href="#cb14-13"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="rmarkdownquarto-formats" class="slide level2">
 <h2>2. RMarkdown/Quarto Formats</h2>
@@ -757,8 +785,8 @@
 <section id="convert-your-rmarkdown-code-chunks" class="slide level2">
 <h2>3. Convert your RMarkdown Code Chunks</h2>
 <p><code>knitr::convert_chunk_header()</code> will convert your RMarkdown code chunks into quarto compatible format.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {{r}} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>knitr::convert_chunk_header("filename.Rmd", </span>
-<span id="cb13-2"><a href="#cb13-2"></a>    output = "filename.qmd")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {{r}} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>knitr::convert_chunk_header("filename.Rmd", </span>
+<span id="cb15-2"><a href="#cb15-2"></a>    output = "filename.qmd")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="converting-code-chunks" class="slide level2">
 <h2>3. Converting Code Chunks</h2>
@@ -766,22 +794,22 @@
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Original Chunk</a></li><li><a href="#tabset-2-2">Converted Chunk</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="in">```{r setup, include=FALSE}</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="fu">library</span>(DT)</span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="fu">library</span>(ggimage)</span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="fu">library</span>(DT)</span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="fu">library</span>(ggimage)</span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-2-2">
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="co">#| label = "setup",</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="co">#| include = FALSE</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="fu">library</span>(DT)</span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="fu">library</span>(ggimage)</span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="co">#| label = "setup",</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co">#| include = FALSE</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="fu">library</span>(DT)</span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="fu">library</span>(ggimage)</span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -791,11 +819,11 @@
 <ul>
 <li>Render button in RStudio</li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>()<span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>()<span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="render-via-command-line" class="slide level2">
 <h2>4. Render via Command Line</h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">&gt;</span> quarto <span class="ex">render</span> <span class="op">&lt;</span>filename<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;</span> quarto <span class="ex">render</span> <span class="op">&lt;</span>filename<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="update-your-_quarto.yml-for-websites" class="slide level2">
 <h2>5. Update your <code>_quarto.yml</code> for websites</h2>
@@ -803,43 +831,43 @@
 <li>Controls <a href="https://quarto.org/docs/websites/">navigation and visibility of documents</a></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="1-2|4-6|7-12"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="an">project:</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>  type: website</span>
-<span id="cb18-3"><a href="#cb18-3"></a></span>
-<span id="cb18-4"><a href="#cb18-4"></a>website:</span>
-<span id="cb18-5"><a href="#cb18-5"></a>  title: "Ted Laderas, PhD"</span>
-<span id="cb18-6"><a href="#cb18-6"></a>  description: "Ted's R and Teaching Blog"</span>
-<span id="cb18-7"><a href="#cb18-7"></a>  navbar:</span>
-<span id="cb18-8"><a href="#cb18-8"></a>    right:</span>
-<span id="cb18-9"><a href="#cb18-9"></a><span class="ss">      - </span>teaching.qmd</span>
-<span id="cb18-10"><a href="#cb18-10"></a><span class="ss">      - </span>articles.rmd</span>
-<span id="cb18-11"><a href="#cb18-11"></a><span class="ss">      - </span>blog.qmd</span>
-<span id="cb18-12"><a href="#cb18-12"></a><span class="ss">      - </span>talks.qmd</span>
-<span id="cb18-13"><a href="#cb18-13"></a><span class="ss">      - </span>notebook.ipynb #works for Jupyter notebooks!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="1-2|4-6|7-12"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1"></a><span class="an">project:</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>  type: website</span>
+<span id="cb20-3"><a href="#cb20-3"></a></span>
+<span id="cb20-4"><a href="#cb20-4"></a>website:</span>
+<span id="cb20-5"><a href="#cb20-5"></a>  title: "Ted Laderas, PhD"</span>
+<span id="cb20-6"><a href="#cb20-6"></a>  description: "Ted's R and Teaching Blog"</span>
+<span id="cb20-7"><a href="#cb20-7"></a>  navbar:</span>
+<span id="cb20-8"><a href="#cb20-8"></a>    right:</span>
+<span id="cb20-9"><a href="#cb20-9"></a><span class="ss">      - </span>teaching.qmd</span>
+<span id="cb20-10"><a href="#cb20-10"></a><span class="ss">      - </span>articles.rmd</span>
+<span id="cb20-11"><a href="#cb20-11"></a><span class="ss">      - </span>blog.qmd</span>
+<span id="cb20-12"><a href="#cb20-12"></a><span class="ss">      - </span>talks.qmd</span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="ss">      - </span>notebook.ipynb #works for Jupyter notebooks!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="mix-and-match-formats" class="slide level2">
 <h2>Mix and Match Formats</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="7|8|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>website<span class="sc">:</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>  title<span class="sc">:</span> <span class="st">"Ted Laderas, PhD"</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>  description<span class="sc">:</span> <span class="st">"Ted's R and Teaching Blog"</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a>  navbar<span class="sc">:</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a>    right<span class="sc">:</span></span>
-<span id="cb19-6"><a href="#cb19-6"></a>      <span class="sc">-</span> teaching.qmd</span>
-<span id="cb19-7"><a href="#cb19-7"></a>      <span class="sc">-</span> articles.rmd</span>
-<span id="cb19-8"><a href="#cb19-8"></a>      <span class="sc">-</span> blog.qmd</span>
-<span id="cb19-9"><a href="#cb19-9"></a>      <span class="sc">-</span> talks.qmd</span>
-<span id="cb19-10"><a href="#cb19-10"></a>      <span class="sc">-</span> notebook.ipynb </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="7|8|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>website<span class="sc">:</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>  title<span class="sc">:</span> <span class="st">"Ted Laderas, PhD"</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>  description<span class="sc">:</span> <span class="st">"Ted's R and Teaching Blog"</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>  navbar<span class="sc">:</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a>    right<span class="sc">:</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>      <span class="sc">-</span> teaching.qmd</span>
+<span id="cb21-7"><a href="#cb21-7"></a>      <span class="sc">-</span> articles.rmd</span>
+<span id="cb21-8"><a href="#cb21-8"></a>      <span class="sc">-</span> blog.qmd</span>
+<span id="cb21-9"><a href="#cb21-9"></a>      <span class="sc">-</span> talks.qmd</span>
+<span id="cb21-10"><a href="#cb21-10"></a>      <span class="sc">-</span> notebook.ipynb </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="publish-your-files-on-cli" class="slide level2">
 <h2>Publish your files (on CLI)</h2>
 <p><code>quarto publish</code> can push and update a number of different kinds of webhosts. You will need credentials to publish to each of these.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="ex">quarto</span> publish gh-pages    <span class="co"># GitHub Pages</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="ex">quarto</span> publish quarto-pub  <span class="co"># Quarto.pub </span></span>
-<span id="cb20-3"><a href="#cb20-3"></a><span class="ex">quarto</span> publish netlify     <span class="co"># Netlify</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a><span class="ex">quarto</span> publish connect     <span class="co"># RStudio Connect</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1"></a><span class="ex">quarto</span> publish gh-pages    <span class="co"># GitHub Pages</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="ex">quarto</span> publish quarto-pub  <span class="co"># Quarto.pub </span></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="ex">quarto</span> publish netlify     <span class="co"># Netlify</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="ex">quarto</span> publish connect     <span class="co"># RStudio Connect</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <aside><div>
 <p><a href="https://quarto.org/docs/publishing/" class="uri">https://quarto.org/docs/publishing/</a></p>

@@ -95,7 +95,7 @@
     "href": "index.html#some-killer-apps-for-quarto-html",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Some Killer Apps for Quarto (HTML)",
-    "text": "Some Killer Apps for Quarto (HTML)\n\nPrecise Layouts\nTab Panels\nCode Highlighting"
+    "text": "Some Killer Apps for Quarto (HTML)\n\nOutput Freezing\nPrecise Layouts\nTab Panels\nCode Highlighting"
   },
   {
     "objectID": "index.html#layout-example",
@@ -264,5 +264,19 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Mix and Match Formats",
     "text": "Mix and Match Formats\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb"
+  },
+  {
+    "objectID": "index.html#freeze-results-and-avoid-recomputing",
+    "href": "index.html#freeze-results-and-avoid-recomputing",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Freeze Results and avoid recomputing",
+    "text": "Freeze Results and avoid recomputing\n\nCreates a freeze/ directory in your project\nSaves intermediate output\n\n#| eval: false\n#| echo: true\n#| filename: _quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
+  },
+  {
+    "objectID": "index.html#freeze-results-cli",
+    "href": "index.html#freeze-results-cli",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Freeze Results: CLI",
+    "text": "Freeze Results: CLI\n\nResults are frozen with quarto render by default.\nUse --execute to recompute:\n\n\nquarto render . --execute"
   }
 ]

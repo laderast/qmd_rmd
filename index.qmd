@@ -150,9 +150,40 @@ library(ggimage)
 
 ## Some Killer Apps for Quarto (HTML)
 
+- Output Freezing
 - Precise Layouts
 - Tab Panels
 - Code Highlighting
+
+## Freeze Results and avoid recomputing
+
+- Creates a `freeze/` directory in your project
+- Saves intermediate output
+
+```
+#| eval: false
+#| echo: true
+#| filename: _quarto.yml
+
+project:
+  title: "qmd_rmd"
+  type: website
+  output-dir: docs
+  
+freeze: true
+```
+
+## Freeze Results: CLI
+
+- Results are frozen with `quarto render` by default.
+- Use `--execute` to recompute:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+quarto render . --execute
+```
 
 ## Layout Example
 
