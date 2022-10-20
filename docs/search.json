@@ -207,14 +207,14 @@
     "href": "index.html#update-your-_quarto.yml-for-websites",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "5. Update your _quarto.yml for websites",
-    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents\n\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.qmd\n      - blog.qmd\n      - talks.qmd"
+    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents\n\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb #works for Jupyter notebooks!"
   },
   {
     "objectID": "index.html#publish-your-files-on-cli",
     "href": "index.html#publish-your-files-on-cli",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Publish your files (on CLI)",
-    "text": "Publish your files (on CLI)\nquarto publish can push and update a number of different kinds of webhosts.\nquarto publish gh-pages    # GitHub Pages\nquarto publish quarto-pub  # Quarto.pub \nquarto publish netlify     # Netlify\nquarto publish connect     # RStudio Connect\n\n\nhttps://quarto.org/docs/publishing/"
+    "text": "Publish your files (on CLI)\nquarto publish can push and update a number of different kinds of webhosts. You will need credentials to publish to each of these.\nquarto publish gh-pages    # GitHub Pages\nquarto publish quarto-pub  # Quarto.pub \nquarto publish netlify     # Netlify\nquarto publish connect     # RStudio Connect\n\n\nhttps://quarto.org/docs/publishing/"
   },
   {
     "objectID": "index.html#conclusions",
@@ -257,5 +257,12 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "4. Render via Command Line",
     "text": "4. Render via Command Line\n> quarto render <filename>"
+  },
+  {
+    "objectID": "index.html#mix-and-match-formats",
+    "href": "index.html#mix-and-match-formats",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Mix and Match Formats",
+    "text": "Mix and Match Formats\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb"
   }
 ]

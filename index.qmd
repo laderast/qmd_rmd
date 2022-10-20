@@ -1,11 +1,11 @@
 ---
 title: "Quarto/RMarkdown - What's Different?"
 author: Ted Laderas
-subtitle: FCT Abuja useR Group
-date: 9/15/2022
+subtitle: PDX-R Meetup
+date: 10/20/2022
 format: 
   revealjs:
-    self-contained: true
+    standalone: true
     theme: night
     progress: true
     footer: <https://laderast.github.io/qmd_rmd/>
@@ -409,14 +409,36 @@ website:
   navbar:
     right:
       - teaching.qmd
-      - articles.qmd
+      - articles.rmd
       - blog.qmd
       - talks.qmd
+      - notebook.ipynb #works for Jupyter notebooks!
+```
+
+## Mix and Match Formats
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-line-numbers: "7|8|10"
+
+website:
+  title: "Ted Laderas, PhD"
+  description: "Ted's R and Teaching Blog"
+  navbar:
+    right:
+      - teaching.qmd
+      - articles.rmd
+      - blog.qmd
+      - talks.qmd
+      - notebook.ipynb 
+
 ```
 
 ## Publish your files (on CLI)
 
 `quarto publish` can push and update a number of different kinds of webhosts. 
+You will need credentials to publish to each of these.
 
 ```{.bash}
 quarto publish gh-pages    # GitHub Pages
