@@ -557,16 +557,19 @@
 <li>Creates a <code>freeze/</code> directory in your project</li>
 <li>Saves intermediate output</li>
 </ul>
-<pre><code>#| eval: false
-#| echo: true
-#| filename: _quarto.yml
-
-project:
-  title: "qmd_rmd"
-  type: website
-  output-dir: docs
-  
-freeze: true</code></pre>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">project:</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="ex">title:</span> <span class="st">"qmd_rmd"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="ex">type:</span> website</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="ex">output-dir:</span> docs</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  </span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="ex">freeze:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
 <section id="freeze-results-cli" class="slide level2">
 <h2>Freeze Results: CLI</h2>
@@ -637,7 +640,7 @@ freeze: true</code></pre>
 <div id="tabset-1-2">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -831,6 +834,10 @@ freeze: true</code></pre>
 <li>Controls <a href="https://quarto.org/docs/websites/">navigation and visibility of documents</a></li>
 </ul>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb20" data-code-line-numbers="1-2|4-6|7-12"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1"></a><span class="an">project:</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a>  type: website</span>
 <span id="cb20-3"><a href="#cb20-3"></a></span>
@@ -845,20 +852,26 @@ freeze: true</code></pre>
 <span id="cb20-12"><a href="#cb20-12"></a><span class="ss">      - </span>talks.qmd</span>
 <span id="cb20-13"><a href="#cb20-13"></a><span class="ss">      - </span>notebook.ipynb #works for Jupyter notebooks!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 </section>
 <section id="mix-and-match-formats" class="slide level2">
 <h2>Mix and Match Formats</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="7|8|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>website<span class="sc">:</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>  title<span class="sc">:</span> <span class="st">"Ted Laderas, PhD"</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  description<span class="sc">:</span> <span class="st">"Ted's R and Teaching Blog"</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>  navbar<span class="sc">:</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a>    right<span class="sc">:</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a>      <span class="sc">-</span> teaching.qmd</span>
-<span id="cb21-7"><a href="#cb21-7"></a>      <span class="sc">-</span> articles.rmd</span>
-<span id="cb21-8"><a href="#cb21-8"></a>      <span class="sc">-</span> blog.qmd</span>
-<span id="cb21-9"><a href="#cb21-9"></a>      <span class="sc">-</span> talks.qmd</span>
-<span id="cb21-10"><a href="#cb21-10"></a>      <span class="sc">-</span> notebook.ipynb </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="7|8|10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1"></a><span class="an">website:</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>  title: "Ted Laderas, PhD"</span>
+<span id="cb21-3"><a href="#cb21-3"></a>  description: "Ted's R and Teaching Blog"</span>
+<span id="cb21-4"><a href="#cb21-4"></a>  navbar:</span>
+<span id="cb21-5"><a href="#cb21-5"></a>    right:</span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="ss">      - </span>teaching.qmd</span>
+<span id="cb21-7"><a href="#cb21-7"></a><span class="ss">      - </span>articles.rmd</span>
+<span id="cb21-8"><a href="#cb21-8"></a><span class="ss">      - </span>blog.qmd</span>
+<span id="cb21-9"><a href="#cb21-9"></a><span class="ss">      - </span>talks.qmd</span>
+<span id="cb21-10"><a href="#cb21-10"></a><span class="ss">      - </span>notebook.ipynb </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
 <section id="publish-your-files-on-cli" class="slide level2">

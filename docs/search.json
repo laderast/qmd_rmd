@@ -207,7 +207,7 @@
     "href": "index.html#update-your-_quarto.yml-for-websites",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "5. Update your _quarto.yml for websites",
-    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents\n\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb #works for Jupyter notebooks!"
+    "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb #works for Jupyter notebooks!"
   },
   {
     "objectID": "index.html#publish-your-files-on-cli",
@@ -263,14 +263,14 @@
     "href": "index.html#mix-and-match-formats",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Mix and Match Formats",
-    "text": "Mix and Match Formats\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb"
+    "text": "Mix and Match Formats\n\n\n\n_quarto.yml\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb"
   },
   {
     "objectID": "index.html#freeze-results-and-avoid-recomputing",
     "href": "index.html#freeze-results-and-avoid-recomputing",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Freeze Results and avoid recomputing",
-    "text": "Freeze Results and avoid recomputing\n\nCreates a freeze/ directory in your project\nSaves intermediate output\n\n#| eval: false\n#| echo: true\n#| filename: _quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
+    "text": "Freeze Results and avoid recomputing\n\nCreates a freeze/ directory in your project\nSaves intermediate output\n\n\n\n\n_quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
   },
   {
     "objectID": "index.html#freeze-results-cli",

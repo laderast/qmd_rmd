@@ -160,7 +160,7 @@ library(ggimage)
 - Creates a `freeze/` directory in your project
 - Saves intermediate output
 
-```
+```{bash}
 #| eval: false
 #| echo: true
 #| filename: _quarto.yml
@@ -430,6 +430,7 @@ quarto::quarto_render()`
 ```{markdown}
 #| echo: TRUE
 #| eval: FALSE
+#| filename: _quarto.yml
 #| code-line-numbers: "1-2|4-6|7-12"
 project:
   type: website
@@ -448,10 +449,11 @@ website:
 
 ## Mix and Match Formats
 
-```{r}
+```{markdown}
 #| echo: TRUE
 #| eval: FALSE
 #| code-line-numbers: "7|8|10"
+#| filename: _quarto.yml
 
 website:
   title: "Ted Laderas, PhD"
