@@ -74,7 +74,7 @@
     "href": "index.html#quarto",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Quarto",
-    "text": "Quarto\n```{r}\n#| label: \"setup\",\n#| include: false\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+    "text": "Quarto\n```{r}\n#| label: \"setup\"\n#| include: false\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
   },
   {
     "objectID": "index.html#how-is-quarto-different-from-rmarkdown",
