@@ -270,7 +270,7 @@
     "href": "index.html#freeze-results-and-avoid-recomputing",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Freeze Results and avoid recomputing",
-    "text": "Freeze Results and avoid recomputing\n\nCreates a freeze/ directory in your project\nSaves intermediate output\n\n\n\n\n_quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
+    "text": "Freeze Results and avoid recomputing\n\nCreates a _freeze/ directory in your project\nSaves intermediate output\n\n\n\n\n_quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
   },
   {
     "objectID": "index.html#freeze-results-cli",

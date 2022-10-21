@@ -157,7 +157,7 @@ library(ggimage)
 
 ## Freeze Results and avoid recomputing
 
-- Creates a `freeze/` directory in your project
+- Creates a `_freeze/` directory in your project
 - Saves intermediate output
 
 ```{bash}
