@@ -88,7 +88,7 @@
     "href": "index.html#should-i-switch-to-quarto",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Should I Switch to Quarto?",
-    "text": "Should I Switch to Quarto?\n\nShould you switch to Quarto? Not necessarily. If you find R Markdown meet your need, you can definitely stay there. It is not imperative to switch. Quarto’s goal is to cover most features of R Markdown eventually, but it may be impossible to become a strict superset of R Markdown. - Yihui Xie\n\n\n\nhttps://yihui.org/en/2022/04/quarto-r-markdown/"
+    "text": "Should I Switch to Quarto?\n\nShould you switch to Quarto? Not necessarily. If you find R Markdown meet your need, you can definitely stay there. It is not imperative to switch. - Yihui Xie\n\n\n\nhttps://yihui.org/en/2022/04/quarto-r-markdown/"
   },
   {
     "objectID": "index.html#some-killer-apps-for-quarto-html",
