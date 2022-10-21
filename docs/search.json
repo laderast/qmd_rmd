@@ -74,7 +74,7 @@
     "href": "index.html#quarto",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Quarto",
-    "text": "Quarto\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+    "text": "Quarto\n```{r}\n#| label: \"setup\",\n#| include: false\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
   },
   {
     "objectID": "index.html#how-is-quarto-different-from-rmarkdown",
@@ -193,7 +193,7 @@
     "href": "index.html#converting-code-chunks",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "3. Converting Code Chunks",
-    "text": "3. Converting Code Chunks\n\nOriginal ChunkConverted Chunk\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\n\n```{r}\n#| label = \"setup\",\n#| include = FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
+    "text": "3. Converting Code Chunks\n\nOriginal ChunkConverted Chunk\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\n\n```{r}\n#| label: \"setup\",\n#| include: FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
   },
   {
     "objectID": "index.html#render-your-files-on-cli",
