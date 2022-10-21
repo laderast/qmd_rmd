@@ -493,15 +493,9 @@ quarto publish connect     # RStudio Connect
 
 ## Learn More
 
-Workshop materials from Andrew Bray: <https://github.com/rstudio-conf-2022/rmd-to-quarto>
+- Workshop materials from Andrew Bray: <https://github.com/rstudio-conf-2022/rmd-to-quarto>
+- Repository for this talk: <https://github.com/laderast/qmd_rmd>
+
 
 # Thank You! Questions?
 
-# Extras
-
-## Observable + Shiny + Quarto
-
-- Rapid prototyping of responsive dashboards
-- Uses Observable for front end
-- Uses Shiny reactives for backend
-- Quarto for Layout

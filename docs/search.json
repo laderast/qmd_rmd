@@ -228,7 +228,7 @@
     "href": "index.html#learn-more",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Learn More",
-    "text": "Learn More\nWorkshop materials from Andrew Bray: https://github.com/rstudio-conf-2022/rmd-to-quarto"
+    "text": "Learn More\n\nWorkshop materials from Andrew Bray: https://github.com/rstudio-conf-2022/rmd-to-quarto\nRepository for this talk: https://github.com/laderast/qmd_rmd"
   },
   {
     "objectID": "index.html#observable-shiny-quarto",
