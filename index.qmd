@@ -75,7 +75,7 @@ quarto render my_document.qmd
     - Python
     - Julia
     - Observable
-- Can [interchange between langugages using Apache Arrow](https://gist.github.com/hrbrmstr/23355194d1964688596553a0e6a0050a)
+- Can [interchange between languages using Apache Arrow](https://gist.github.com/hrbrmstr/23355194d1964688596553a0e6a0050a)
 
 
 ## Jupyter Notebook Support

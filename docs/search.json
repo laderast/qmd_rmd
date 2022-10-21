@@ -39,7 +39,7 @@
     "href": "index.html#cross-language-support",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Cross Language Support",
-    "text": "Cross Language Support\n\nSupports a number of languages:\n\nR\nPython\nJulia\nObservable\n\nCan interchange between langugages using Apache Arrow"
+    "text": "Cross Language Support\n\nSupports a number of languages:\n\nR\nPython\nJulia\nObservable\n\nCan interchange between languages using Apache Arrow"
   },
   {
     "objectID": "index.html#jupyter-notebook-support",
