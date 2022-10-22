@@ -227,9 +227,10 @@ This is where I would put some code:
 
 ### Figure
 
+ggpplot code here
+
 :::
 ````
-
 
 ## Tabsets
 

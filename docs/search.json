@@ -116,7 +116,7 @@
     "href": "index.html#tabsets",
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Tabsets",
-    "text": "Tabsets\n::: {.panel-tabset}\n\n### Code\n\nThis is where I would put some code:\n\n### Figure\n\n:::"
+    "text": "Tabsets\n::: {.panel-tabset}\n\n### Code\n\nThis is where I would put some code:\n\n### Figure\n\nggpplot code here\n\n:::"
   },
   {
     "objectID": "index.html#tabsets-1",
@@ -278,5 +278,12 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Freeze Results: CLI",
     "text": "Freeze Results: CLI\n\nResults are frozen with quarto render by default.\nUse --execute to recompute:\n\n\nquarto render . --execute"
+  },
+  {
+    "objectID": "index.html#test-1",
+    "href": "index.html#test-1",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Test 1",
+    "text": "Test 1\n\nCodeFigure\n\n\nThis is where I would put some code:\n\n\nggplot code here"
   }
 ]
