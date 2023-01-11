@@ -1,8 +1,8 @@
 ---
 title: "Quarto/RMarkdown - What's Different?"
 author: Ted Laderas
-subtitle: PDX-R Meetup
-date: 10/20/2022
+subtitle: R-Ladies Paris Meetup
+date: 1/12/2023
 format: 
   revealjs:
     standalone: true
@@ -40,12 +40,6 @@ highlight-style: a11y
 ::::
 
 # What is Quarto?
-
-## RStudio Conference 2022
-
-- Quarto Publishing System: <https://quarto.org>
-- [Mine and Julia's talk about Collaborating with Quarto](https://www.rstudio.com/conference/2022/keynotes/collaborate-with-quarto/)
-- [Joe Cheng's Shiny Talk](https://www.rstudio.com/conference/2022/keynotes/past-future-shiny/)
 
 ## What is Quarto?
 

@@ -14,13 +14,6 @@
     "text": "About Me\n\n\n\nRStudio Academy Data Science Mentor\nRStudio/Carpentries Certified Instructor\nBioinformatics Trainer at DNAnexus\nTwitter: @tladeras\nWeb: https://laderast.github.io/"
   },
   {
-    "objectID": "index.html#rstudio-conference-2022",
-    "href": "index.html#rstudio-conference-2022",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "RStudio Conference 2022",
-    "text": "RStudio Conference 2022\n\nQuarto Publishing System: https://quarto.org\nMine and Julia’s talk about Collaborating with Quarto\nJoe Cheng’s Shiny Talk"
-  },
-  {
     "objectID": "index.html#what-is-quarto-1",
     "href": "index.html#what-is-quarto-1",
     "title": "Quarto/RMarkdown - What’s Different?",
@@ -96,6 +89,20 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Some Killer Apps for Quarto (HTML)",
     "text": "Some Killer Apps for Quarto (HTML)\n\nOutput Freezing\nPrecise Layouts\nTab Panels\nCode Highlighting"
+  },
+  {
+    "objectID": "index.html#freeze-results-and-avoid-recomputing",
+    "href": "index.html#freeze-results-and-avoid-recomputing",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Freeze Results and avoid recomputing",
+    "text": "Freeze Results and avoid recomputing\n\nCreates a _freeze/ directory in your project\nSaves intermediate output\n\n\n\n\n_quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
+  },
+  {
+    "objectID": "index.html#freeze-results-cli",
+    "href": "index.html#freeze-results-cli",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Freeze Results: CLI",
+    "text": "Freeze Results: CLI\n\nResults are frozen with quarto render by default.\nUse --execute to recompute:\n\n\nquarto render . --execute"
   },
   {
     "objectID": "index.html#layout-example",
@@ -196,11 +203,18 @@
     "text": "3. Converting Code Chunks\n\nOriginal ChunkConverted Chunk\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```\n\n\n```{r}\n#| label: \"setup\",\n#| include: FALSE\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(DT)\nlibrary(ggimage)\n```"
   },
   {
-    "objectID": "index.html#render-your-files-on-cli",
-    "href": "index.html#render-your-files-on-cli",
+    "objectID": "index.html#render-via-rstudio-gui",
+    "href": "index.html#render-via-rstudio-gui",
     "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "4. Render your files (on CLI)",
-    "text": "4. Render your files (on CLI)\nquarto render ."
+    "section": "4. Render via RStudio GUI",
+    "text": "4. Render via RStudio GUI\n\nRender button in RStudio\n\nquarto::quarto_render()`"
+  },
+  {
+    "objectID": "index.html#render-via-command-line",
+    "href": "index.html#render-via-command-line",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "4. Render via Command Line",
+    "text": "4. Render via Command Line\n> quarto render <filename>"
   },
   {
     "objectID": "index.html#update-your-_quarto.yml-for-websites",
@@ -208,6 +222,13 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "5. Update your _quarto.yml for websites",
     "text": "5. Update your _quarto.yml for websites\n\nControls navigation and visibility of documents\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb #works for Jupyter notebooks!"
+  },
+  {
+    "objectID": "index.html#mix-and-match-formats",
+    "href": "index.html#mix-and-match-formats",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Mix and Match Formats",
+    "text": "Mix and Match Formats\n\n\n\n_quarto.yml\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb"
   },
   {
     "objectID": "index.html#publish-your-files-on-cli",
@@ -231,59 +252,10 @@
     "text": "Learn More\n\nWorkshop materials from Andrew Bray: https://github.com/rstudio-conf-2022/rmd-to-quarto\nRepository for this talk: https://github.com/laderast/qmd_rmd"
   },
   {
-    "objectID": "index.html#observable-shiny-quarto",
-    "href": "index.html#observable-shiny-quarto",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Observable + Shiny + Quarto",
-    "text": "Observable + Shiny + Quarto\n\nRapid prototyping of responsive dashboards\nUses Observable for front end\nUses Shiny reactives for backend\nQuarto for Layout\n\n\n\nhttps://laderast.github.io/qmd_rmd/"
-  },
-  {
-    "objectID": "index.html#render-your-files",
-    "href": "index.html#render-your-files",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "4. Render your files",
-    "text": "4. Render your files\n\n\nVia RStudio GUI\n\nRender button in RStudio\n\nquarto::quarto_render()`\n\nVia Command Line\nquarto render <filename>"
-  },
-  {
-    "objectID": "index.html#render-via-rstudio-gui",
-    "href": "index.html#render-via-rstudio-gui",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "4. Render via RStudio GUI",
-    "text": "4. Render via RStudio GUI\n\nRender button in RStudio\n\nquarto::quarto_render()`"
-  },
-  {
-    "objectID": "index.html#render-via-command-line",
-    "href": "index.html#render-via-command-line",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "4. Render via Command Line",
-    "text": "4. Render via Command Line\n> quarto render <filename>"
-  },
-  {
-    "objectID": "index.html#mix-and-match-formats",
-    "href": "index.html#mix-and-match-formats",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Mix and Match Formats",
-    "text": "Mix and Match Formats\n\n\n\n_quarto.yml\n\nwebsite:\n  title: \"Ted Laderas, PhD\"\n  description: \"Ted's R and Teaching Blog\"\n  navbar:\n    right:\n      - teaching.qmd\n      - articles.rmd\n      - blog.qmd\n      - talks.qmd\n      - notebook.ipynb"
-  },
-  {
-    "objectID": "index.html#freeze-results-and-avoid-recomputing",
-    "href": "index.html#freeze-results-and-avoid-recomputing",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Freeze Results and avoid recomputing",
-    "text": "Freeze Results and avoid recomputing\n\nCreates a _freeze/ directory in your project\nSaves intermediate output\n\n\n\n\n_quarto.yml\n\nproject:\n  title: \"qmd_rmd\"\n  type: website\n  output-dir: docs\n  \nfreeze: true"
-  },
-  {
-    "objectID": "index.html#freeze-results-cli",
-    "href": "index.html#freeze-results-cli",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Freeze Results: CLI",
-    "text": "Freeze Results: CLI\n\nResults are frozen with quarto render by default.\nUse --execute to recompute:\n\n\nquarto render . --execute"
-  },
-  {
-    "objectID": "index.html#test-1",
-    "href": "index.html#test-1",
-    "title": "Quarto/RMarkdown - What’s Different?",
-    "section": "Test 1",
-    "text": "Test 1\n\nCodeFigure\n\n\nThis is where I would put some code:\n\n\nggplot code here"
+    "objectID": "flights_demo.html",
+    "href": "flights_demo.html",
+    "title": "flights_demo",
+    "section": "",
+    "text": "var_f = flight_cols\nviewof xcol_f = Inputs.select(var_f, {label: \"X Variable\", value: var_f[0]})\nviewof ycol_f = Inputs.select(var_f, {label: \"Y Variable\", value: var_f[1]})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.rect(transpose(selectedData_f), Plot.bin({fillOpacity: \"count\"}, {x: xcol_f, y: ycol_f})).plot()"
   }
 ]
