@@ -26,9 +26,9 @@ highlight-style: a11y
 :::: {.columns}
 
 ::: {.column width="65%"}
-- [RStudio Academy](https://www.rstudio.com/academy) Data Science Mentor
-- RStudio/Carpentries Certified Instructor
 - Bioinformatics Trainer at [DNAnexus](https://dnanexus.com)
+- [Posit Academy](https://www.posit.co/academy) Data Science Mentor
+- RStudio/Carpentries Certified Instructor
 - Twitter: @tladeras 
 - Web: https://laderast.github.io/
 :::
