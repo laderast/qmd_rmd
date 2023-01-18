@@ -30,7 +30,7 @@ highlight-style: a11y
 - [Posit Academy](https://www.posit.co/academy) Data Science Mentor
 - RStudio/Carpentries Certified Instructor
 - Twitter: @tladeras 
-- Web: https://laderast.github.io/
+- Web: <https://laderast.github.io/>
 :::
 
 ::: {.column width="35%"}
