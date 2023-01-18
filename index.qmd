@@ -1,8 +1,8 @@
 ---
 title: "Quarto/RMarkdown - What's Different?"
 author: Ted Laderas
-subtitle: R-Ladies Paris Meetup
-date: 1/12/2023
+subtitle: Hymans R User Group
+date: 1/18/2023
 format: 
   revealjs:
     standalone: true
@@ -477,6 +477,23 @@ quarto publish connect     # RStudio Connect
 ::: aside
 <https://quarto.org/docs/publishing/>
 :::
+
+
+## Multiple languages
+
+Hand off data objects with multiple languages in a Quarto Document
+
+|Languages|Method|
+|---------|-----|
+|Python <=> R | `{reticulate}`/Apache Arrow or Pandas|
+|R <=> JavaScript |`ojs_define()` function|
+|Python <=> JavaScript | `ojs_define` function|
+
+## Apache Arrow
+
+- "Language Independent Columnar memory format" 
+- Handles very large datasets / CSV files
+- Code example here [Intro to Apache Arrow](https://github.com/laderast/intro_to_arrow) 
 
 ## Conclusions
 

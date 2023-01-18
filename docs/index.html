@@ -382,6 +382,8 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -389,7 +391,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Quarto/RMarkdown - What’s Different?</h1>
-  <p class="subtitle">R-Ladies Paris Meetup</p>
+  <p class="subtitle">Hymans R User Group</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -399,7 +401,7 @@ Ted Laderas
 </div>
 </div>
 
-  <p class="date">1/12/23</p>
+  <p class="date">1/18/23</p>
 </section>
 <section id="agenda-for-today" class="slide level2">
 <h2>Agenda for Today</h2>
@@ -885,6 +887,40 @@ Ted Laderas
 <aside><div>
 <p><a href="https://quarto.org/docs/publishing/" class="uri">https://quarto.org/docs/publishing/</a></p>
 </div></aside></section>
+<section id="multiple-languages" class="slide level2">
+<h2>Multiple languages</h2>
+<p>Hand off data objects with multiple languages in a Quarto Document</p>
+<table>
+<thead>
+<tr class="header">
+<th>Languages</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Python &lt;=&gt; R</td>
+<td><code>{reticulate}</code>/Apache Arrow or Pandas</td>
+</tr>
+<tr class="even">
+<td>R &lt;=&gt; JavaScript</td>
+<td><code>ojs_define()</code> function</td>
+</tr>
+<tr class="odd">
+<td>Python &lt;=&gt; JavaScript</td>
+<td><code>ojs_define</code> function</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="apache-arrow" class="slide level2">
+<h2>Apache Arrow</h2>
+<ul>
+<li>“Language Independent Columnar memory format”</li>
+<li>Handles very large datasets / CSV files</li>
+<li>Code example here <a href="https://github.com/laderast/intro_to_arrow">Intro to Apache Arrow</a></li>
+</ul>
+</section>
 <section id="conclusions" class="slide level2">
 <h2>Conclusions</h2>
 <ul>
@@ -1118,6 +1154,16 @@ Ted Laderas
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    {"contents":[]}
+    </script>
+    <script type="module">
+    window._ojs.paths.runtimeToDoc = "../..";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     
     <script>
