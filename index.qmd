@@ -1,7 +1,7 @@
 ---
 title: "Quarto/RMarkdown - What's Different?"
 author: Ted Laderas
-subtitle: Hymans R User Group
+subtitle: Hymans Robertson R User Group
 date: 1/18/2023
 format: 
   revealjs:
