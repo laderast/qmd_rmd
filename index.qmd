@@ -495,6 +495,13 @@ Hand off data objects with multiple languages in a Quarto Document
 - Handles very large datasets / CSV files
 - Code example here [Intro to Apache Arrow](https://github.com/laderast/intro_to_arrow) 
 
+## Observable/Shiny
+
+- Use Observable Components (`viewof`, Observable Plot) with Shiny
+- `viewof` inputs are passed into Shiny's `input` opject
+- Use `ojs_define()` function to pass reactives to Observable code chunks
+- [Example/Demo](https://github.com/laderast/ojs_shiny_example)
+
 ## Conclusions
 
 - Quarto supports multiple languages / IDEs

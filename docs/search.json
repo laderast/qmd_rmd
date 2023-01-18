@@ -271,5 +271,12 @@
     "title": "Quarto/RMarkdown - What’s Different?",
     "section": "Apache Arrow",
     "text": "Apache Arrow\n\n“Language Independent Columnar memory format”\nHandles very large datasets / CSV files\nCode example here Intro to Apache Arrow"
+  },
+  {
+    "objectID": "index.html#observableshiny",
+    "href": "index.html#observableshiny",
+    "title": "Quarto/RMarkdown - What’s Different?",
+    "section": "Observable/Shiny",
+    "text": "Observable/Shiny\n\nUse Observable Components (viewof, Observable Plot) with Shiny\nviewof inputs are passed into Shiny’s input opject\nUse ojs_define() function to pass reactives to Observable code chunks\nExample/Demo"
   }
 ]
